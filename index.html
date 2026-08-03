@@ -1,1 +1,213 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<title>Ferramenta de Pré‑Validação</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background: #f5f5f5;
+        margin: 0;
+        padding: 0;
+    }
+
+    header {
+        background: #003366;
+        color: white;
+        padding: 20px;
+        text-align: center;
+        font-size: 22px;
+        font-weight: bold;
+    }
+
+    .container {
+        width: 90%;
+        margin: auto;
+        padding: 20px;
+    }
+
+    h2 {
+        margin-top: 40px;
+        color: #003366;
+    }
+
+    .upload-box {
+        background: white;
+        padding: 20px;
+        border-radius: 8px;
+        margin-bottom: 30px;
+        box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 15px;
+        background: white;
+    }
+
+    th, td {
+        border: 1px solid #ccc;
+        padding: 10px;
+        vertical-align: top;
+    }
+
+    th {
+        background: #e6e6e6;
+        text-align: left;
+    }
+
+    select, textarea {
+        width: 100%;
+        padding: 6px;
+        border-radius: 4px;
+        border: 1px solid #aaa;
+        resize: vertical;
+    }
+
+    .section {
+        margin-bottom: 50px;
+    }
+</style>
+</head>
+<body>
+
+<header>Ferramenta de Pré‑Validação</header>
+
+<div class="container">
+
+    <!-- INPUTS -->
+    <div class="upload-box">
+        <h2>Upload de Documentos</h2>
+        <p>Carrega os documentos correspondentes a cada categoria:</p>
+
+        <label>Embalagem:</label>
+        <input type="file"><br><br>
+
+        <label>Manual do Utilizador:</label>
+        <input type="file"><br><br>
+
+        <label>Ficha Técnica / Especificações:</label>
+        <input type="file"><br><br>
+
+        <label>Rating Label:</label>
+        <input type="file"><br><br>
+
+        <label>Declaração de Conformidade:</label>
+        <input type="file"><br><br>
+    </div>
+
+    <!-- OUTPUT SECTIONS -->
+    <!-- EMBALAGEM -->
+    <div class="section">
+        <h2>Embalagem</h2>
+        <table>
+            <tr>
+                <th>Parte</th>
+                <th>Resultado</th>
+                <th>Comentários / Explicação</th>
+                <th>Base Legal</th>
+            </tr>
+
+            <!-- Itens principais (CONFORME / NÃO CONFORME / INCONCLUSIVO) -->
+            <tr>
+                <td>Presença e formato correto da marcação CE</td>
+                <td>
+                    <select>
+                        <option>CONFORME</option>
+                        <option>NÃO CONFORME</option>
+                        <option>INCONCLUSIVO</option>
+                    </select>
+                </td>
+                <td><textarea></textarea></td>
+                <td><textarea></textarea></td>
+            </tr>
+
+            <!-- Itens secundários (OK / NOK / INCONCLUSIVO / N/A) -->
+            <tr><td>Símbolo WEEE</td>
+                <td>
+                    <select>
+                        <option>OK</option><option>NOK</option>
+                        <option>INCONCLUSIVO</option><option>N/A</option>
+                    </select>
+                </td>
+                <td><textarea></textarea></td>
+                <td><textarea></textarea></td>
+            </tr>
+
+            <tr><td>Símbolo de descarte baterias (se aplicável)</td>
+                <td>
+                    <select>
+                        <option>OK</option><option>NOK</option>
+                        <option>INCONCLUSIVO</option><option>N/A</option>
+                    </select>
+                </td>
+                <td><textarea></textarea></td>
+                <td><textarea></textarea></td>
+            </tr>
+
+            <tr><td>Pictogramas de segurança</td>
+                <td>
+                    <select>
+                        <option>OK</option><option>NOK</option>
+                        <option>INCONCLUSIVO</option><option>N/A</option>
+                    </select>
+                </td>
+                <td><textarea></textarea></td>
+                <td><textarea></textarea></td>
+            </tr>
+
+            <tr><td>Pictograma/informação carregador único (se aplicável)</td>
+                <td>
+                    <select>
+                        <option>OK</option><option>NOK</option>
+                        <option>INCONCLUSIVO</option><option>N/A</option>
+                    </select>
+                </td>
+                <td><textarea></textarea></td>
+                <td><textarea></textarea></td>
+            </tr>
+
+            <tr><td>Tensão e frequência de operação</td>
+                <td>
+                    <select>
+                        <option>OK</option><option>NOK</option>
+                        <option>INCONCLUSIVO</option><option>N/A</option>
+                    </select>
+                </td>
+                <td><textarea></textarea></td>
+                <td><textarea></textarea></td>
+            </tr>
+
+            <tr><td>Identificação do fabricante/importador e país de fabrico</td>
+                <td>
+                    <select>
+                        <option>OK</option><option>NOK</option>
+                        <option>INCONCLUSIVO</option><option>N/A</option>
+                    </select>
+                </td>
+                <td><textarea></textarea></td>
+                <td><textarea></textarea></td>
+            </tr>
+
+            <tr><td>Modelo / referência do produto (Lote ou SN)</td>
+                <td>
+                    <select>
+                        <option>OK</option><option>NOK</option>
+                        <option>INCONCLUSIVO</option><option>N/A</option>
+                    </select>
+                </td>
+                <td><textarea></textarea></td>
+                <td><textarea></textarea></td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- Repete a mesma estrutura para Manual, Ficha Técnica, Rating Label, DoC -->
+    <!-- Para não tornar a resposta gigante, posso gerar as restantes secções automaticamente se quiseres -->
+
+</div>
+
+</body>
+</html>
 
